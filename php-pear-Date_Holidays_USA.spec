@@ -45,8 +45,9 @@ rm -rf %{buildroot}
 
 #TODO: ajouter les tests ?
 
-install -d %{buildroot}%{_datadir}/pear/%{_class}/%{_subclass}/Driver
+install -d %{buildroot}%{_datadir}/pear/%{_class}/%{_subclass}/{Driver,lang/%{_region}}
 install %{_pearname}-%{version}/%{_subclass}/Driver/*.php %{buildroot}%{_datadir}/pear/%{_class}/%{_subclass}/Driver
+install %{_pearname}-%{version}/lang/%{_region}/*.{xml,ser} %{buildroot}%{_datadir}/pear/%{_class}/%{_subclass}/lang/%{_region}
 
 install -d %{buildroot}%{_datadir}/pear/packages
 install -m0644 package.xml %{buildroot}%{_datadir}/pear/packages/%{_pearname}.xml
@@ -76,4 +77,7 @@ rm -rf %{buildroot}
 %files
 %defattr(644,root,root,755)
 %{_datadir}/pear/%{_class}/%{_subclass}/Driver/*.php
+%dir %{_datadir}/pear/%{_class}/%{_subclass}/lang/%{_region}
+%{_datadir}/pear/%{_class}/%{_subclass}/lang/%{_region}/*.xml
+%{_datadir}/pear/%{_class}/%{_subclass}/lang/%{_region}/*.ser
 %{_datadir}/pear/packages/%{_pearname}.xml
