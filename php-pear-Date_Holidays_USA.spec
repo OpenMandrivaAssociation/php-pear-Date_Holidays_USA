@@ -61,3 +61,33 @@ fi
 %{_datadir}/pear/%{_class}
 %{_datadir}/pear/data/%{upstream_name}
 %{_datadir}/pear/packages/%{upstream_name}.xml
+
+
+%changelog
+* Fri Dec 16 2011 Oden Eriksson <oeriksson@mandriva.com> 0.1.1-5mdv2012.0
++ Revision: 741914
+- fix major breakage by careless packager
+
+* Fri May 27 2011 Oden Eriksson <oeriksson@mandriva.com> 0.1.1-4
++ Revision: 679311
+- mass rebuild
+
+* Tue Dec 07 2010 Oden Eriksson <oeriksson@mandriva.com> 0.1.1-3mdv2011.0
++ Revision: 613651
+- the mass rebuild of 2010.1 packages
+
+* Wed Dec 16 2009 Guillaume Rousse <guillomovitch@mandriva.org> 0.1.1-2mdv2010.1
++ Revision: 479283
+- spec cleanup
+- use pear installer
+- don't ship tests, even in documentation
+- own all directories
+- use rpm filetriggers starting from mandriva 2010.1
+
+* Mon Apr 20 2009 Raphaël Gertz <rapsys@mandriva.org> 0.1.1-1mdv2009.1
++ Revision: 368163
+- Add package specific files
+- Add spec and source files for php-pear-Date_Holidays_USA
+- Update inscorrect package name
+- Add new splited php-pear-Date_Holidays package upstream structure
+
